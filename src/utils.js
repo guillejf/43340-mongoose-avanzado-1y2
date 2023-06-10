@@ -24,7 +24,7 @@ import faker from 'faker';
 import { UserModel } from './DAO/models/users.model.js';
 export async function connectMongo() {
   try {
-    await connect('mongodb+srv://guillermofergnani:g5JdbbGYiCXw7vHS@51395.qrp9dhg.mongodb.net/');
+    await connect('mongodb+srv://guillermofergnani:d3IUa8A4QOAZkoQa@guille-cluster.pzfq0ua.mongodb.net/');
     console.log('plug to mongo!!!');
 
     /* let student = await StudentsModel.findOne({ _id: '6477e9884df43016016bf2fa' });
@@ -49,8 +49,8 @@ export async function connectMongo() {
     let res = await StudentsModel.updateOne({ _id: '648261af17398abe3ca41985' }, student);
     console.log(res); */
 
-    let todosLosEstudiantes = await StudentsModel.findOne({ _id: '648261af17398abe3ca41985' });
-    console.log(JSON.stringify(todosLosEstudiantes, null, 2));
+    /* let todosLosEstudiantes = await StudentsModel.findOne({ _id: '648261af17398abe3ca41985' });
+    console.log(JSON.stringify(todosLosEstudiantes, null, 2)); */
 
     /* const created = CoursesModel.create({
       topics: ['web', 'software', 'backend'],
@@ -110,8 +110,6 @@ export async function connectMongo() {
 //----------------SOCKET------------------------------
 import { Server } from 'socket.io';
 import { MsgModel } from './DAO/models/msgs.model.js';
-import { StudentsModel } from './DAO/models/students.model.js';
-import { CoursesModel } from './DAO/models/courses.model.js';
 export function connectSocket(httpServer) {
   const socketServer = new Server(httpServer);
 
