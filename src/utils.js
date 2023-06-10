@@ -24,7 +24,7 @@ import faker from 'faker';
 import { UserModel } from './DAO/models/users.model.js';
 export async function connectMongo() {
   try {
-    await connect('mongodb+srv://guillermofergnani:d3IUa8A4QOAZkoQa@guille-cluster.pzfq0ua.mongodb.net/');
+    await connect('');
     console.log('plug to mongo!!!');
 
     /* let student = await StudentsModel.findOne({ _id: '6477e9884df43016016bf2fa' });
